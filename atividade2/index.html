@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-        <title>Forum</title>
-    </head>
-    <body>
-        <h1>Segurança na web</h1>
-        <ul>
-            <li>Introdução</li>
-            <li>Itens e subitens do tema</li>
-            <li>Conclusão</li>
-            <li>referencias</li>
-        </ul>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/icone.ico" type="image/x-icon">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <title>Forum</title>
+    <style>
+        .active {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="bg-gray-800 p-4 fixed w-full top-0">
+            <ul class="flex space-x-4">
+                <li><a href="#introducao" class="text-white">Introdução</a></li>
+                <li><a href="#itens" class="text-white">Itens e Subitens</a></li>
+                <li><a href="#conclusao" class="text-white">Conclusão</a></li>
+                <li><a href="#referencias" class="text-white">Referências</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="mt-16">
+        <div id="introducao">
+            <h1 class="text-3xl font-bold underline">
+                Segurança na web
+            </h1>
+        </div>
+
+        <div id="itens">
+            <ul>
+                <li>Introdução</li>
+                <li>Itens e subitens do tema</li>
+                <li>Conclusão</li>
+                <li>Referências</li>
+            </ul>
+        </div>
+        
+        <div id="conclusao">
+            <h2>Conclusão</h2>
+            <p>...</p>
+        </div>
+
+        <div id="referencias">
+            <h2>Referências</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <footer>
+        Copyright © 2025 Isabella FGS
+    </footer>
+    <script src="functions.js"></script>
+</body>
 </html>
