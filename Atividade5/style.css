@@ -1,0 +1,28 @@
+.mao-jokenpo {
+    width: 60px;
+    animation: mover 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+.mao-jokenpo-bob {
+    width: 60px;
+    animation: moverBob 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes moverBob {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
