@@ -92,9 +92,68 @@ function gerarRelatorio() {
 }
 
 function limparDados() {
-    localStorage.removeItem('idades');
-    localStorage.removeItem('sexos');
-    localStorage.removeItem('avaliacoes');
-    alert("Dados limpos!");
-    document.getElementById('resultadoTexto').innerText = 'Nenhum dado registrado ainda.';
+
+    if (idades.length !== 0) {
+        localStorage.removeItem('idades');
+        localStorage.removeItem('sexos');
+        localStorage.removeItem('avaliacoes');
+        alert("Dados limpos!");
+        return;
+    }
 }
+
+
+const graficoNotas = new Chart(document.getElementById('graficoNotas'), {
+    type: 'bar',
+    data: {
+        labels: ['Ótimo', 'Bom', 'Regular', 'Péssimo'],
+        datasets: [{
+            label: 'Quantidade',
+            data: [qtdOtimo, qtdBom, qtdRegular, qtdPessimo],
+            backgroundColor: ['#00ff00', '#66ff66', '#cccc00', '#ff3333']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                labels: { color: '#ffffff' }
+            }
+        },
+        scales: {
+            x: {
+                ticks: { color: '#ffffff' }
+            },
+            y: {
+                ticks: { color: '#ffffff' }
+            }
+        }
+    }
+});
+
+
+const graficoSexos = new Chart(document.getElementById('graficoSexos'), {
+    type: 'bar',
+    data: {
+        labels: ['Feminino', 'Masculino', 'Outro'],
+        datasets: [{
+            label: 'Qtd',
+            data: [qtdFeminino, qtdMasculino, qtdOutro],
+            backgroundColor: ['#ff66cc', '#3399ff', '#cccccc']
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                labels: { color: '#ffffff' }
+            }
+        },
+        scales: {
+            x: {
+                ticks: { color: '#ffffff' }
+            },
+            y: {
+                ticks: { color: '#ffffff' }
+            }
+        }
+    }
+});

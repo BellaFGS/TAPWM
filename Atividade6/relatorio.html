@@ -8,13 +8,16 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
+    <body class="bodyRelatorio">
         <h1>Relatório da Pesquisa</h1>
         
         <div id="resultadoTexto"></div>
-        
-        <canvas id="graficoNotas" width="400" height="200"></canvas>
-        <canvas id="graficoSexos" width="400" height="200"></canvas>
+
+        <div class="graficosContainer">
+            <canvas id="graficoNotas"></canvas>
+            <canvas id="graficoSexos"></canvas>
+        </div>
+
         
         <script>
             gerarRelatorio(); // chama a função do script.js
