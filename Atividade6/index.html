@@ -1,33 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/ico.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Pesquisa</title>
 </head>
-<body>
-
+<body class="bodyIndex">
     <div class="mainDashbord">
-        <div class="titulo">
-            <h1>Pesquisa de satisfação</h1>
-            <h3>Filme MINECRAFT 🎮</h3>
+
+        <div class="cardLeft"> <!-- Imagem -->
+            
         </div>
     
-        <div class="form">
-            <form action="">
-                <label for="nome">Nome</label>
-                <input type="text">
-                <label for="sexo">Sexo</label>
-                <input type="text">
-                <label for="nota">Nota</label>
-                <input type="text">
-                <label for="nome">Nome</label>
-                <input type="text">
-            </form>
-        </div>
+        <div class="cardRight"> <!-- Formulario -->
+            <h1>Pesquisa - Filme Minecraft</h1>
+            <form id="pesquisaForm">
+                <label>Idade: <input type="number" id="idade" required></label><br>
 
+                <div class="sexo">
+                    <label for="sexo">Sexo:</label>
+                    <div>
+                        <input type="radio" name="sexo" value="f" required>
+                        <label for="f">Feminino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" value="m">
+                        <label for="m">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" value="o">
+                        <label for="o">Outro</label>
+                    </div>
+                </div>
+
+                <div class="nota">
+                    <label for="nota">Nota:</label>
+                    <div>
+                        <input type="radio" name="nota" value="1" required>
+                        <label for="otimo">Ótimo</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nota" value="2">
+                        <label for="bom">Bom</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nota" value="3">
+                        <label for="regular">Regular</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nota" value="4">
+                        <label for="pessimo">Péssimo</label>
+                    </div>
+                </div>
+        
+                <button type="submit">Registrar</button>
+            </form>
+        
+            <br>
+            <button onclick="window.location.href='relatorio.html'">Ver Relatório</button>
+        </div>
     </div>
 
-    
+
+
+    <script src="script.js"></script>
 </body>
 </html>

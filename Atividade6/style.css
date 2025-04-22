@@ -1,0 +1,79 @@
+.bodyIndex {
+    margin: 0;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainDashbord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 90vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cardLeft {
+    background-image: url('./img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+.cardRight {
+    background: #ffffff;
+    height: 90%;
+    width: 50%;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    color: #333;
+}
+
+.cardRight h1 {
+    color: #2e7d32;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cardRight form {
+    background-color: #f1f8e9;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    /* gap: 10px; */
+}
+
+.cardRight form label {
+    font-weight: 500;
+}
+
+.cardRight input[type="number"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.cardRight .sexo{ display: flex; flex-direction: column; background-color: rgb(255, 255, 255); width: 100%; margin: 0px; padding: 5px; border-radius: 10px; margin-bottom: 2%;}
+.cardRight .nota{ display: flex; flex-direction: column; background-color: rgb(255, 255, 255); width: 100%; margin: 0px; padding: 5px; border-radius: 10px;}
+
+.cardRight button { background-color: #4CAF50; color: white; padding: 10px; margin-top: 10px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+
+.cardRight button:hover { background-color: #388e3c; }
