@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.bodyRelatorio { margin: 0; padding: 20px; background-color: #2b2b2b; background-image: url('./img/minecraft-pattern.png'); color: #ffffff; font-family: 'Press Start 2P', cursive; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.bodyRelatorio { margin: 0; background-color: #2b2b2b; background-image: url('./img/minecraft-pattern.png'); color: #ffffff; font-family: 'Press Start 2P', cursive; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .bodyIndex { background-color: #2b2b2b; margin: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; font-family: 'Press Start 2P', cursive; }
 
 .mainDashbord { display: flex; justify-content: center; align-items: center; width: 80vw; height: 90vh; box-shadow: 0 0 20px rgb(0, 0, 0); border-radius: 20px; overflow: hidden; }
 
 .mainDashbord .cardLeft { background-image: url('./img/background.png'); background-repeat: no-repeat; background-size: cover; width: 50%; height: 100%; border-radius: 20px 0 0 20px;}
 
-.mainDashbord .cardRight { background: #ffffff; height: 90%; width: 50%; border-radius: 0 20px 20px 0; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 40px; color: #333; }
+.mainDashbord .cardRight { background: #ffffff; height: 100%; width: 50%; border-radius: 0 20px 20px 0; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 40px; color: #333; }
 .mainDashbord .cardRight h1 { color: #2e7d32; font-size: 1rem; font-weight: 700; margin-bottom: 20px; text-align: center; }
 .mainDashbord .cardRight form { background-color: #f1f8e9; display: flex; flex-direction: column; padding: 20px; border-radius: 12px; width: 100%; max-width: 400px; }
+.mainDashbord .cardRight form div:nth-child(1) {display: flex; width: 100%; justify-content: space-between; margin-bottom: 10px;  }
 .mainDashbord .cardRight form label { font-size: 10px;}
 
-.mainDashbord .cardRight input[type="number"] { padding: 8px; border-radius: 6px; border: 1px solid #ccc; outline: none; margin-bottom: 10px; }
+.mainDashbord .cardRight input[type="number"] { padding: 8px; border-radius: 6px; border: 1px solid #ccc; outline: none; }
 .mainDashbord .cardRight .sexo{ display: flex; flex-direction: column; background-color: rgb(255, 255, 255); width: 100%; margin: 0px; padding: 5px; border-radius: 10px; margin-bottom: 2%;}
 .mainDashbord .cardRight .sexo label:nth-child(1){ color: rgba(0, 0, 0, 0.518);}
 .mainDashbord .cardRight .nota{ display: flex; flex-direction: column; background-color: rgb(255, 255, 255); width: 100%; margin: 0px; padding: 5px; border-radius: 10px;}
@@ -20,8 +21,9 @@
 
 .mainDashbord .cardRight button { background-color: #4CAF50; color: white; padding: 10px; margin-top: 10px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
 .mainDashbord .cardRight button:hover { background-color: #388e3c; }
-.mainDashbord .cardRight .button { width: 94%; display: flex; justify-content: end; align-items: center; margin-bottom: 5px ;}
-.mainDashbord .cardRight .button button { margin: 0px; }
+.mainDashbord .cardRight .button { display: flex; align-items: center;}
+.mainDashbord .cardRight .button button { margin: 0px; color: #ffffff; background-color: #181818; transition: all 0.2s;}
+.mainDashbord .cardRight .button button:hover { filter: opacity(80%);}
 
 
 
@@ -30,18 +32,17 @@
 /* Wrapper pros gráficos lado a lado */
 .graficosContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 80vw;
-    background-color: white;
+    justify-content: center; 
+    width: 80vw;
+
 }
 
 /* Gráficos menores */
 canvas {
-    width: 300px !important;
-    height: 200px !important;
+    background-color: white;
+    width: 50% !important;
+    height: auto !important;
+    margin: 0px 10px;
 }
 
 /* Texto do relatório mais compacto */
