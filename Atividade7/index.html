@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Triangulo</title>
+    </head>
+    <body>
+        <div class="container">
+            
+            <!-- <div id="resultado" class="equilatero"></div> -->
+            <div id="resultado" class="teacher"></div>
+            
+            
+                <div>
+                    <h1 id="titulo">Triângulo</h1>
+                    <form id="trianguloForm">
+                        <label for="ladoA">Lado A:</label>
+                        <input type="number" id="a" required>
+                        <label for="ladoB">Lado B:</label>
+                        <input type="number" id="b" required>
+                        <label for="ladoC">Lado C:</label>
+                        <input type="number" id="c" required>
+                        <button type="button" onclick="calcularDados();">Verificar</button>
+                        <button type="button" onclick="limparFormulario();">Limpar</button>
+                    </form>
+                </div>
+                
+        </div>
+        
+    </body>
+    <script src="script.js"></script>
+</html>
