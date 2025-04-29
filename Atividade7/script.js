@@ -36,8 +36,6 @@ function calcularDados() {
     }
 }
 
-
-
 function limparFormulario() {
     document.getElementById("a").value = "";
     document.getElementById("b").value = "";
