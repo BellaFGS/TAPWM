@@ -1,0 +1,13 @@
+body { width: 95vw; height: 90vh; display: flex; align-items: center; justify-content: center; }
+.container {background-color: red; width: 80vw; height: 80vh; display: flex; border-radius: 20px;}
+
+/* Index */
+.container .left { background-image: url('./imgs/bob.gif'); background-repeat: no-repeat; background-size: contain; background-position: center; width: 50%; }
+.container .right { width: 50%;  display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 0px 20px 20px 0px; }
+.container .right div { width: 50%; padding: 20px; }
+.container .right div a { text-decoration: none; background-color: yellow; color: black; font-weight: bold; padding: 10px; border-radius: 10px; transition: all 0.2s; }
+.container .right div a:hover { filter: opacity(80%); }
+
+/* maxMin */
+.container .form-container { width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.container .form-container form {background-color: yellow; height: 50%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; } 
