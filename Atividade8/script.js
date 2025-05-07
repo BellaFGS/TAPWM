@@ -1,7 +1,16 @@
 function numMaximo() {
-    var num1 = parseInt(document.getElementById("num1").value);
-    var num2 = parseInt(document.getElementById("num2").value);
-    var num3 = parseInt(document.getElementById("num3").value);
+    var valor1 = document.getElementById("num1").value.trim();
+    var valor2 = document.getElementById("num2").value.trim();
+    var valor3 = document.getElementById("num3").value.trim();
+
+    if (valor1 === "" || valor2 === "" || valor3 === "" || isNaN(valor1) || isNaN(valor2) || isNaN(valor3)) {
+        alert("Número inválido ou vazio detectado! Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    var num1 = parseInt(valor1);
+    var num2 = parseInt(valor2);
+    var num3 = parseInt(valor3);
 
     var maximo = Math.max(num1, num2, num3);
 
@@ -9,17 +18,36 @@ function numMaximo() {
 }
 
 function numCrescente() {
-    var num1 = parseInt(document.getElementById("num1").value);
-    var num2 = parseInt(document.getElementById("num2").value);
-    var num3 = parseInt(document.getElementById("num3").value);
+    var valor1 = document.getElementById("num1").value.trim();
+    var valor2 = document.getElementById("num2").value.trim();
+    var valor3 = document.getElementById("num3").value.trim();
+
+    if (valor1 === "" || valor2 === "" || valor3 === "" || isNaN(valor1) || isNaN(valor2) || isNaN(valor3)) {
+        alert("Número inválido ou vazio detectado! Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    var num1 = parseInt(valor1);
+    var num2 = parseInt(valor2);
+    var num3 = parseInt(valor3);
+
+    if (num1 === num2 && num2 === num3) {
+        document.getElementById("resultado").innerHTML = "Todos os números são iguais!";
+        return;
+    }
 
     var numeros = [num1, num2, num3];
     numeros.sort(function(a, b) { return a - b; });
 
-    document.getElementById("resultado").innerHTML = "Os números em ordem crescente são ➡ " + numeros.join(", ");
+    document.getElementById("resultado").innerHTML = "Ordem crescente ➡ " + numeros.join(", ");
 }
 
 function palindromo() {
+if (document.getElementById("palindromo").value === "") {
+        alert("Por favor, preencha o campo.");
+        return;
+    }
+
     var palavra = document.getElementById("palindromo").value;
     palavra = palavra.replace(/[^a-z0-9]/gi, "").toLowerCase(); // Remove caracteres especiais e converte para minúsculas
     console.log(palavra);

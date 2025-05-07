@@ -9,25 +9,31 @@
     <body>
         <div class="container">
             <div class="form-container">
-                <h1>Número máximo</h1>
                 <form id="maxMinForm">
-                    <label for="num1">Número 1:</label>
-                    <input type="number" id="num1" required>
-                    <label for="num2">Número 2:</label>
-                    <input type="number" id="num2" required>
-                    <label for="num3">Número 3:</label>
-                    <input type="number" id="num3" required>
-                    <button type="button" onclick="numMaximo();">Checar</button>
-                    <button type="button" onclick="limparCampos();">Limpar</button>
-                    <a href="../index.html">Voltar</a>
+                    <h4>Digite três números</h4>
+                    <div>
+                        <label for="num1">(1)</label>
+                        <input type="number" id="num1" required>
+                    </div>
+                    <div>
+                        <label for="num2">(2)</label>
+                        <input type="number" id="num2" required>
+                    </div>
+                    <div>
+                        <label for="num3">(3)</label>
+                        <input type="number" id="num3" required>
+                    </div>
+                    <div>
+                        <button type="button" onclick="numMaximo();">Checar</button>
+                        <button type="button" onclick="limparCampos();">Limpar</button>
+                        <a href="../index.html">Voltar</a>
+                    </div>
                 </form>
             </div>
             <div class="resultado-container">
-                <h2>Resultado:</h2>
                 <p id="resultado"></p>
             </div>
         </div>
-        
-        <script src="../script.js"></script>
     </body>
+    <script src="../script.js"></script>
 </html>

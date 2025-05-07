@@ -1,24 +1,29 @@
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../style.css" />
         <title>Palíndromo</title>
     </head>
     <body>
-        <div>
-            <div>
-                <h1>Verificador de palíndromo</h1>
-                    <label for="palindromo">Digite uma palavra ou frase:</label>
-                    <input type="text" id="palindromo" name="palindromo" required>
-                    <button type="button" onclick="palindromo();">Verificar</button>
-                    <button type="button" onclick="limparCampos();">Limpar</button>
-                    <a href="../index.html">Voltar</a>
+        <div class="container">
+            <div class="sub-container">
+                <div>
+                    <h4>Verificador de palíndromo</h4>
+                    <input type="text" id="palindromo" name="palindromo" required />
+                    <div>
+                        <button type="button" onclick="palindromo();">Verificar</button>
+                        <button type="button" onclick="limparCampos();">Limpar</button>
+                        <a href="../index.html">Voltar</a>
+                    </div>
+                </div>
             </div>
-            <div>
+            <div class="resultado-container">
+                <h2>Resultado:</h2>
                 <p id="resultado"></p>
             </div>
         </div>
+        <script src="../script.js"></script>
     </body>
-    <script src="../script.js"></script>
 </html>
