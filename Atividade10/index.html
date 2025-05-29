@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando objetos</title>
+
+    <script>
+        //1º forma de criar um objeto
+        var funcionario1 = new Object(); 
+        funcionario1.matricula = "123456";
+        funcionario1.nome = "João";
+        funcionario1.funcao = "Gerente";
+        alert(`Matrícula: ${funcionario1.matricula} \nNome: ${funcionario1.nome} \nFunção: ${funcionario1.funcao}`);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //2º forma de criar um objeto
+        var funcionario2 = { 
+            matricula: "654321",
+            nome: "Maria",
+            funcao: "Analista"
+        }
+        alert(`Matrícula: ${funcionario2.matricula} \nNome: ${funcionario2.nome} \nFunção: ${funcionario2.funcao}`);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //3º forma de criar um objeto
+        function funcionario3(matricula, nome, funcao){ 
+            this.matricula = matricula;
+            this.nome = nome;
+            this.funcao = funcao;
+            this.MostrarDados = function () {
+                return "Matrícula: " + this.matricula + "\n" + "Nome: " + this.nome + "\n" + "Função: " + this.funcao;
+            }
+        }
+        var funcionario3Obj = new funcionario3("789012", "Carlos", "Desenvolvedor");
+        alert(funcionario3Obj.MostrarDados());
+    </script>
+
+</head>
+<body style="width: 95vw; height: 90vh;">
+    <h1>Criando objetos</h1>
+    <hr>
+    <p>Veja o código fonte para entender como os objetos foram criados.</p>
+    <p>Recarregue a pagina para ver o resultado </p>
+    <img src="./imgs/giphy_1.webp" alt="" style="width: 50%; height: 50%; object-fit:contain;">
+</body>
+</html>

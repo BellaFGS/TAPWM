@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+
+        <script>
+            function retangulo(x,y) {
+                this.x = x;
+                this.y = y;
+                this.calcularArea = function(x,y) {
+                    return this.x * this.y;
+                };
+                this.retornarDados = function() {
+                    return "Area: " + this.x + " x " + this.y + " = " + this.calcularArea();
+                };   
+            }
+            const base = parseFloat(prompt("Digite a base do retângulo:"));
+            const altura = parseFloat(prompt("Digite a altura do retângulo:"));
+
+            var retangulo = new retangulo(base, altura);
+            alert(retangulo.retornarDados());
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        class Conta {
+            constructor(nomeCorrentista, banco, numeroConta, saldo) {
+                this._nomeCorrentista = nomeCorrentista;
+                this._banco = banco;
+                this._numeroConta = numeroConta;
+                this._saldo = saldo;
+            }
+
+            
+            get nomeCorrentista() {
+                return this._nomeCorrentista;
+            }
+
+            set nomeCorrentista(novoNome) {
+                this._nomeCorrentista = novoNome;
+            }
+
+            get banco() {
+                return this._banco;
+            }
+
+            set banco(novoBanco) {
+                this._banco = novoBanco;
+            }
+
+            get numeroConta() {
+                return this._numeroConta;
+            }
+
+            set numeroConta(novoNumero) {
+                this._numeroConta = novoNumero;
+            }
+
+            get saldo() {
+                return this._saldo;
+            }
+
+            set saldo(novoSaldo) {
+                this._saldo = novoSaldo;
+            }
+
+            mostrarDados() {
+                return `
+                    Nome: ${this.nomeCorrentista}
+                    Banco: ${this.banco}
+                    Conta: ${this.numeroConta}
+                    Saldo: R$ ${this.saldo.toFixed(2)}
+                `;
+            }
+        }
+
+        class Corrente extends Conta {
+            constructor(nomeCorrentista, banco, numeroConta, saldo, saldoEspecial) {
+                super(nomeCorrentista, banco, numeroConta, saldo);
+                this._saldoEspecial = saldoEspecial;
+            }
+
+            get saldoEspecial() {
+                return this._saldoEspecial;
+            }
+
+            set saldoEspecial(novoSaldoEspecial) {
+                this._saldoEspecial = novoSaldoEspecial;
+            }
+
+            mostrarDados() {
+                return super.mostrarDados() + `
+                    Saldo Especial: R$ ${this.saldoEspecial.toFixed(2)}
+                    Saldo Total Disponível: R$ ${(this.saldo + this.saldoEspecial).toFixed(2)}
+                `;
+            }
+        }
+
+        class Poupanca extends Conta {
+            constructor(nomeCorrentista, banco, numeroConta, saldo, juros, dataVencimento) {
+                super(nomeCorrentista, banco, numeroConta, saldo);
+                this._juros = juros;
+                this._dataVencimento = dataVencimento;
+            }
+
+            get juros() {
+                return this._juros;
+            }
+
+            set juros(novosJuros) {
+                this._juros = novosJuros;
+            }
+
+            get dataVencimento() {
+                return this._dataVencimento;
+            }
+
+            set dataVencimento(novaData) {
+                this._dataVencimento = novaData;
+            }
+
+            mostrarDados() {
+                return super.mostrarDados() + `
+                    Taxa de Juros: ${this.juros}%
+                    Data de Vencimento: ${this.dataVencimento}
+                    Rendimento estimado: R$ ${(this.saldo * this.juros / 100).toFixed(2)}
+                `;
+            }
+        }
+        // Função para coletar dados via prompt
+        function coletarDados(tipoConta) {
+            const nome = prompt(`Digite o nome do correntista (${tipoConta}):`);
+            const banco = prompt(`Digite o nome do banco (${tipoConta}):`);
+            const conta = prompt(`Digite o número da conta (${tipoConta}):`);
+            const saldo = parseFloat(prompt(`Digite o saldo inicial (${tipoConta}):`));
+
+            if (tipoConta === 'Corrente') {
+                const saldoEspecial = parseFloat(prompt("Digite o saldo especial:"));
+                return new Corrente(nome, banco, conta, saldo, saldoEspecial);
+            } else {
+                const juros = parseFloat(prompt("Digite a taxa de juros (%):"));
+                const vencimento = prompt("Digite a data de vencimento (dd/mm/aaaa):");
+                return new Poupanca(nome, banco, conta, saldo, juros, vencimento);
+            }
+        }
+
+        // Criando objetos
+        const contaCorrente = coletarDados('Corrente');
+        const contaPoupanca = coletarDados('Poupança');
+
+        // Mostrando os dados
+        alert("Dados da Conta Corrente:\n" + contaCorrente.mostrarDados());
+        alert("Dados da Conta Poupança:\n" + contaPoupanca.mostrarDados());
+
+        </script>
+    </head>
+    
+    <body>
+        
+    </body>
+</html>
