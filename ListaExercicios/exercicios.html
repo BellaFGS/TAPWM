@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Exercícios - TAPWM</title>
+</head>
+<body>
+  <h1>Lista de Exercícios para Estudo PWEB – 05/2025</h1>
+  <h2>VARIÁVEIS, ESCOPO, TIPOS DE DADOS e OPERADORES</h2>
+
+  <ol>
+    <li>
+      Supondo o seguinte código, informe o que será impresso em cada alert?
+      <pre><code>
+&lt;script&gt;
+var a;
+var b = 15;
+var c = 0;
+var d = 15 / b;
+var e = 15 / c;
+var f = c / 0;
+var g = null;
+alert(a);
+alert(b);
+alert(c);
+alert(d);
+alert(e);
+&lt;/script&gt;
+      </code></pre>
+    </li>
+
+    <li>
+      No código abaixo, escolha a opção que representa o resultado dos consoles:
+      <pre><code>
+&lt;script&gt;
+var numero1 = 10;
+var numero2 = "10";
+var numero3 = new String("10");
+var numero4 = 20 / 2;
+console.log(numero1 === numero2);
+console.log(numero2 == numero3);
+console.log(numero2 === numero3);
+console.log(numero1 == numero4);
+&lt;/script&gt;
+      </code></pre>
+      <ul>
+        <li>a) true, true, true, true</li>
+        <li>b) true, false, false, true</li>
+        <li>c) false, false, false, false</li>
+        <li>d) false, true, false, true</li>
+        <li>e) false, true, false, false</li>
+        <li>f) nenhuma das anteriores</li>
+      </ul>
+    </li>
+
+    <li>
+      Qual será o resultado impresso na tela?
+      <pre><code>
+var i = 1 + "2" + 3;
+for (j = 0; j < 10; j++) {
+  alert(`${i}${j}`);
+  if (j === 5) break;
+}
+      </code></pre>
+    </li>
+
+    <li>Informar qual o resultado em cada console (condicional, vírgula, delete, in, instanceof, this, typeof, void, coalescência nula).</li>
+
+    <li>
+      Supondo o código JavaScript:
+      <pre><code>
+let x = 30;
+let y = null;
+let z;
+alert(String(x));
+alert(String(y));
+alert(String(z));
+alert(x.toString());
+alert(y.toString());
+alert(z.toString());
+      </code></pre>
+      <p>Será impresso na tela:</p>
+      <ul>
+        <li>a) 30, null, undefined, 30, erro, erro</li>
+        <li>b) 30, 0, 0, 30, 0, 0</li>
+        <li>c) 30 undefined, null, 30, undefined, null</li>
+        <li>d) 30, null, undefined, 30, null, undefined</li>
+        <li>e) erro, erro, erro, 30, null, undefined</li>
+        <li>f) 30, null, undefined, 30, null, erro</li>
+      </ul>
+    </li>
+
+    <li>Qual alternativa apresenta o resultado no console das conversões abaixo? (Number, parseInt, parseFloat, String)</li>
+
+    <li>O que será exibido na tela com document.write no código do while?</li>
+
+    <li>Verifique os resultados dos alerts considerando escopo de var, let e const.</li>
+  </ol>
+
+  <h2>FUNÇÕES</h2>
+  <ol start="9">
+    <li>Crie uma função que soma 2 números para cada tipo: declaration, expression, arrow function.</li>
+    <li>Crie uma função que receba uma frase e retorne quantas letras "A" (maiúsculas ou minúsculas) existem.</li>
+    <li>Crie uma função que receba 5 números e retorne-os em ordem decrescente.</li>
+    <li>Crie uma função que receba um array de números e retorne em ordem decrescente.</li>
+    <li>Escreva uma função para gerar a tabuada de um número entre 1 e 10 (formato de string).</li>
+    <li>Considerando os dois últimos dígitos do seu RA, o que a função irá retornar?</li>
+    <li>Informe o que será impresso com a execução da função Imprimir.</li>
+    <li>Qual será o texto mostrado no input do resultado ao clicar no botão?</li>
+    <li>Com número de entrada 4, o resultado do código será: ______</li>
+  </ol>
+
+  <h2>ARRAYS</h2>
+  <ol start="15">
+    <li>O que será mostrado no console após sort() e reverse()?</li>
+    <li>Qual será o resultado do alert após sort numérico?</li>
+    <li>Qual será o resultado do alert após sort em array de nomes?</li>
+    <li>Qual será o valor retornado por `teste.apply(null, arr1)`?</li>
+    <li>Qual será o valor final da variável `total` após manipulação do array `alunos`?</li>
+    <li>Com os valores 12, 20, 8, 19, 14, 1, 4, 12 inseridos no prompt, qual será a palavra formada?</li>
+  </ol>
+
+  <h2>OBJETOS, FUNÇÃO CONSTRUTORA, CLASSES, HERANÇA</h2>
+  <ol start="21">
+    <li>Crie dois objetos (objLivro1 e objLivro2) com propriedades título e autor de formas diferentes.</li>
+    <li>Analise os trechos e diga quais formas de criação de objeto estão corretas.</li>
+    <li>Crie a classe Médico e as subclasses Pediatra e Geriatra com atributos próprios, usando função construtora e classes.</li>
+    <li>O ________ é um formato comum para armazenar e transferir dados aninhados (dica: estrutura usada na Web).</li>
+    <li>Informe se o identificador foi criado como literal (L) ou objeto (O).</li>
+  </ol>
+</body>
+</html>
