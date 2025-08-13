@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade 13</title>
+    </head>
+    <body>
+        <input type="text" name="texto" id="">
+        <label for="caixa-alta">Caixa Alta (AAA)</label>
+        <input type="radio" name="tipo-caixa" id="caixa-alta">
+        <label for="caixa-alta">Caixa Baixa (aaa)</label>
+        <input type="radio" name="tipo-caixa" id="caixa-baixa">
+    </body>
+
+    <script>
+        const caixaAlta = document.getElementById('caixa-alta');    //Selecionando pelo o ID o input N1
+        const caixaBaixa = document.getElementById('caixa-baixa');  //Selecionando pelo o ID o input N2
+        const texto = document.querySelector('input[type="text"]'); //Selecionando o input de texto
+
+        caixaAlta.addEventListener('click', () => { //Evento para iserir o texto em caixa alta
+            const texto = document.querySelector('input[type="text"]');
+            texto.value = texto.value.toUpperCase();
+        });
+
+        caixaBaixa.addEventListener('click', () => { //Evento para iserir o texto em caixa baixa
+            const texto = document.querySelector('input[type="text"]');
+            texto.value = texto.value.toLowerCase();
+        });
+
+        texto.addEventListener('input', () => { //Evento para atualizar o texto conforme a digitação
+            if (caixaAlta.checked) {
+                texto.value = texto.value.toUpperCase();
+            } else if (caixaBaixa.checked) {
+                texto.value = texto.value.toLowerCase();
+            }
+        });
+    </script>
+</html>
