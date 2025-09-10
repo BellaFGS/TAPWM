@@ -7,16 +7,14 @@
   "name": "site_fatec",
   "version": "1.0.0",
   "description": "\"Site da Fatec Sorocaba\"",
-  "main": "Exercicio6.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "app.js",
+    "scripts": {
+    "start": "npx nodemon app.js"
   },
   "author": "\"Isabella\"",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }, 
-  "scripts": {
-    "start": "npx nodemon app.js"
   }
+
 }
