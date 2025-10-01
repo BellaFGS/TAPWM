@@ -20,9 +20,9 @@ module.exports = function(app){
           
                const results = await pool.request().query('SELECT * from PROFESSORES')
           
-               res.json(results.recordset);
+            //res.json(results.recordset);
  
-              // res.render('informacao/professores',{profs: results.recordset})
+              res.render('informacao/professores',{profs: results.recordset})
     
            } catch (err) {
                console.log(err)
